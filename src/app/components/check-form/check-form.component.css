@@ -1,0 +1,43 @@
+.formCheck{
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #f2f2f2;
+    padding: 15px;
+    box-shadow: 0 0 5px #f2f2f2;
+}
+.formCheck .title{
+    text-align: center;
+    color: var(--main-color-alt);
+    text-shadow: 0 0 4px #818181;   
+}
+.formCheck .form-control{
+    margin: 15px;
+    font-size: 20px;
+}
+
+.formCheck .form-control input{
+    margin: 0 20px;
+    height: 30px;
+    border-radius: 3px;
+    outline: none;
+    transition: var(--main-transition);
+}
+.formCheck .form-control input:focus{
+    border: 2px solid var(--main-color);
+}
+.formCheck .submit{
+    display: flex;
+    margin: 0 auto;
+    border: none;
+    padding: 15px 35px;
+    font-size: 15px;
+    color: white;
+    background: var(--main-color);
+    transition: var(--main-transition);
+}
+.formCheck .submit:hover{
+color: var(--main-color);
+background-color: white;
+border: 1px solid var(--main-color);
+}

@@ -1,0 +1,56 @@
+<form class="formCheck" id="formCheck" #form="ngForm" (ngSubmit)="submitForm()">
+    <h2 class="title">Continue Browsing</h2>
+    <div class="form-control">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" [(ngModel)]="name" required minlength="5" #fullname="ngModel" >
+
+        <div *ngIf="fullname.invalid && fullname.dirty">
+            <div *ngIf="fullname.errors?.['required']" class="error"> 
+              Please provide a name
+            </div>
+            <div *ngIf="fullname.errors?.['minlength']" class="error">
+              The name must contain at least 5 characters.
+            </div> 
+          </div>
+
+    </div>
+    <div class="form-control">
+        <label for="address">Address:</label>
+        <input type="text" name="address" [(ngModel)]="address" required minlength="12"  #addr="ngModel" >
+
+        <div *ngIf="addr.invalid && addr.dirty">
+          <div *ngIf="addr.errors?.['required']" class="error"> 
+            Please provide a address
+          </div>
+          <div *ngIf="addr.errors?.['minlength']" class="error">
+            The name must contain at least 12 characters.
+          </div> 
+        </div>
+
+    </div>
+    <div class="form-control">
+        <label for="phone">Phone:</label>
+        <input type="text" name="Phone" [(ngModel)]="phone" required  #phoneNumber="ngModel">
+
+        <div *ngIf="phoneNumber.invalid && phoneNumber.dirty">
+          <div *ngIf="phoneNumber.errors?.['required']" class="error"> 
+            Please provide a phone
+          </div>
+        </div>
+
+    </div>
+    <div class="form-control">
+        <label for="credit">Credit card:</label>
+        <input type="text" name="credit"  [(ngModel)]="credit" required #creditCard="ngModel">
+
+        <div *ngIf="creditCard.invalid && creditCard.dirty">
+          <div *ngIf="creditCard.errors?.['required']" class="error"> 
+            Please provide a Credit card
+          </div>
+        </div>
+
+    </div> 
+   
+    <input type="submit" [disabled]="form.invalid"  class="submit" value="Check Out">
+
+</form>

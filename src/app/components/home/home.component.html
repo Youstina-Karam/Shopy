@@ -1,0 +1,64 @@
+<div class="home">
+
+  <!-- Start Landing-->
+  <div class="landing" >
+    <div class="container">
+        <div class="text">
+          <h1>Welcome, To Shopy store</h1>
+          <p>New collection of fashion clothes</p>
+        </div>
+        <div class="image">
+            <img src="assets/img/home.png" alt="">
+        </div>
+        <div class="spikes"></div>
+    </div>
+    <!-- <a href="#" class="go-down">
+      <i class="fas fa-angle-double-down fa-2x"></i>
+    </a> -->
+  
+</div>
+<!-- End Landing-->
+
+
+<!-- Start productList -->
+<div class="productList" id="productList">
+  <h2 class="main-title">product List</h2>
+  <div class="container">
+    <app-product-list  *ngFor=" let product of products"  [productItem]="product" (liked)="onLike($event)" ></app-product-list>
+  </div>
+</div>
+
+<!-- End productList -->
+
+<!-- Start Feature Products-->
+<div class="feature" id="feature">
+  <h2 class="main-title">Feature Products</h2>
+<div class="container">
+  <div class="card" *ngFor="let fea of featureList">
+    <div class="box" >
+        <div class="imgBx">
+            <img src="{{fea.url}}">
+        </div>
+        <div class="contentBx">
+            <div>
+            <h2>{{fea.name}}</h2>
+            <p>{{fea.description}}</p>
+            <select name="amount" class="amount"  [(ngModel)]="fea.amount" >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+              <span>{{fea.price}}$</span>
+              <a class="info" (click)="addToCart(fea)">Add Cart</a>
+          </div>
+       
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- End Feature Products-->
+
+ 
+</div>

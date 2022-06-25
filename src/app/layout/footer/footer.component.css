@@ -1,0 +1,13 @@
+.footer{
+    text-align: center;
+    background-color: var(--main-color);
+    height: 80px;
+    color: var(--main-color-alt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+} 
+.footer span{
+    color: #f2f2f2;
+}

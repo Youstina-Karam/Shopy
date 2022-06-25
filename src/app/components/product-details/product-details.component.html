@@ -1,0 +1,21 @@
+<div class="productDetails">
+    <h2 class="main-title">product Details</h2>
+        <div class="box" *ngIf="product">
+            <img src="{{product.url}}" alt="">
+            <div class="contant">
+                <h1>{{product.name}}</h1>
+                <p>{{product.description}}</p>
+                <section>
+                <select name="amount" class="amount" [(ngModel)]="product.amount"  >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <span>{{product.price}}$</span>
+                </section>
+                  
+                  <a class="cart" (click)="addToCart(product)">Add Cart</a>
+            </div>
+    </div>
+</div>

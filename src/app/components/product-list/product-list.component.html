@@ -1,0 +1,19 @@
+<div class="box" >
+  <img src="{{productItem.url}}" alt="" />
+  <div class="content">
+    <a class="titlename" [routerLink]="['/ProductList', productItem.id]">{{productItem.name}}</a>
+    <p>{{productItem.description}}</p>
+    <select name="amount" class="amount"  [ngModel]="productItem.amount" (ngModelChange)="onChange($event)">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <span>{{productItem.price}}$</span>
+  </div>
+  <div class="checkLike"> 
+       <input type="checkbox" [value]="!like" (change)="like = !like" name="like" (click)="addFeature(productItem)">
+       <label for="like"> Like</label>
+  </div>
+    <a class="info" (click)="addToCart(productItem)">Add Cart</a>
+</div>

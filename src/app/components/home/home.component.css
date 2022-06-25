@@ -1,0 +1,221 @@
+/* Start Landing */
+.landing {
+    position: relative;
+  }
+  .landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    z-index: -1;
+     transform: skewY(-6deg);
+    transform-origin: top left; 
+  }
+  .landing .container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+  }
+  .landing .text {
+    flex: 1;
+  }
+  @media (max-width: 991px) {
+    .landing .text {
+      text-align: center;
+    }
+  }
+  .landing .text h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: -2px;
+  }
+  @media (max-width: 767px) {
+    .landing .text h1 {
+      font-size: 28px;
+    }
+  }
+  .landing .text p {
+    font-size: 23px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #666;
+    max-width: 500px;
+  }
+  @media (max-width: 991px) {
+    .landing .text p {
+      margin: 10px auto;
+    }
+  }
+  @media (max-width: 767px) {
+    .landing .text p {
+      font-size: 18px;
+    }
+  }
+  .landing .image img {
+    position: relative;
+    width: 600px;
+    animation: up-and-down 5s linear infinite;
+  }
+  @media (max-width: 991px) {
+    .landing .image {
+      display: none;
+    }
+  }
+  .landing .go-down {
+    color: var(--main-color);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+  }
+  .landing .go-down:hover {
+    color: var(--main-color-alt);
+  }
+  .landing .go-down i {
+    animation: bouncing 1.5s infinite;
+  }
+  /* End Landing */
+
+/* Start productList*/
+.productList{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+ }
+ .productList .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+  gap: 40px;
+ }
+ /*End productList*/
+
+/* Start Features */
+.feature{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+.feature .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+  gap: 50px;
+ }
+.feature .card {
+  position: relative;
+  width: 320px;
+  height: 380px;
+  margin: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.feature .card .box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style:preserve-3d ;
+  transition: 1s ease;
+}
+.feature .card:hover .box {
+  transform: rotateY(180deg);
+}
+.feature .card .box .imgBx {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.feature .card .box .imgBx img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feature .card .box .contentBx {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+.feature .card .box .contentBx  div {
+  transform-style: preserve-3d;
+  padding: 20px;
+  min-width: 354px;
+  background: linear-gradient(45deg , var(--main-color),var(--main-color-alt));
+  transform: translateZ(100px);
+
+}
+.feature .card .box .contentBx  div h2 {
+  color: var(--main-color-alt);
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.feature .card .box .contentBx  div p {
+  color: #f2f2f2;
+  font-size:16px;
+
+}
+.feature .card .box .contentBx div .amount{
+  margin-top: 15px;
+  display: inline;
+  font-weight: bold;
+  color: var(--main-color-alt);
+  font-size: 18px;
+  width: 50px;
+  text-align: center;
+ }
+.feature .card .box .contentBx  div span{
+  margin-top: 15px;
+  display: inline;
+  float: right;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  text-align: end;
+ } 
+ .feature .card .box .contentBx  div a{
+  padding: 13px 0;
+  border-top:  1px solid #E6E6E7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color-alt);
+  font-weight: bold;
+  transition: var(--main-transition);
+ }
+ .feature .card .box .contentBx  div a:hover{
+   background-color: var(--main-color-alt);
+   color: white;
+   border: none;
+ }
+/* End features */
+
+/* Start Animation*/
+  @keyframes up-and-down {
+    0% ,100%{
+      transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+  }
+  
+  @keyframes bouncing{
+    0% ,10% ,20% ,30%,50%,80%,100%{
+      transform: translatey(0);
+    }
+  40% ,60%{
+    transform: translatey(-15px);
+  }
+  }
+  /* End Animation*/

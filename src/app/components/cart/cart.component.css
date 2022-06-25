@@ -1,0 +1,106 @@
+.cart{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+   }
+   .cart .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+    gap: 40px;
+   }
+   .cart .box{
+     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+     background-color: white;
+     border-radius: 6px;
+     overflow: hidden;
+     transition: transform var(--main-transition), box-shadow var(--main-transition);
+   }
+   .cart .box:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+   }
+   .cart .box img {
+   max-width: 100%;
+   }
+   .cart .box .content{
+    padding: 20px;
+    text-align: center;
+   }
+   .cart .box .content h3{
+   margin: 0;
+   }
+   .cart .box .content p{
+    margin: 10px 0 0 0 ;
+    line-height: 1.5;
+    color: #777;
+   }
+   .cart .box .content .amount{
+    margin: 10px;
+    width: 45px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+   }
+   .cart .box .content span{
+    margin-top: 15px;
+    display: block;
+    font-weight: bold;
+    color: var(--main-color-alt);
+    font-size: 18px;
+    text-align: end;
+   }
+   .cart .box .info{
+   padding: 20px;
+   border-top:  1px solid #E6E6E7;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--main-color);
+   font-weight: bold;
+   transition: var(--main-transition);
+   }
+  
+   .cart .box .info:hover{
+     background-color: var(--main-color);
+     cursor: pointer;
+     color: white;
+   }
+   .cart .totalPrice {
+       border-top: 1px solid var(--main-color-alt);
+       margin: 15px 0;
+   }
+  .cart .totalPrice h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color-alt);
+  }
+  .cart .totalPrice .continue{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 20px;
+    font-size: 25px;
+    color: white;
+    background: var(--main-color);
+    border: none;
+    box-shadow: 3px 3px 5px #b3b3b3;
+    cursor: pointer;
+    transition: var(--main-transition);
+    
+  }
+  .cart .totalPrice .continue:hover{
+    color: var(--main-color);
+    background: white;
+    border: 2px solid var(--main-color);
+  }
+  .cart .totalPrice .back{
+    display: flex;
+    margin: 20px auto;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--main-color-alt);
+    text-decoration: underline;
+    justify-content: center;
+  }

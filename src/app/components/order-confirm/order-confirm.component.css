@@ -1,0 +1,29 @@
+.confirm{
+    text-align: center;
+    margin: 45px auto;
+}
+.confirm h1{
+    color: var(--main-color);
+}
+.confirm p{
+    font-size: 18px;
+    color: var(--main-color-alt);
+}
+.confirm .back{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    background: var(--main-color);
+    border: none;
+    box-shadow: 3px 3px 5px #b3b3b3;
+    cursor: pointer;
+    transition: var(--main-transition);
+  }
+  .confirm .back:hover{
+    color: var(--main-color);
+    background: white;
+    border: 2px solid var(--main-color);
+  }

@@ -1,0 +1,76 @@
+/* Start productList*/
+ .box{
+     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+     background-color: white;
+     border-radius: 6px;
+     overflow: hidden;
+     transition: transform var(--main-transition), box-shadow var(--main-transition);
+   }
+    .box:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+   }
+   .box img {
+   max-width: 100%;
+   }
+    .box .content{
+    padding: 20px;
+   }
+    .box .content .titlename{
+    margin: 0;
+    font-weight: bold;
+    border-bottom: 2px solid;
+    cursor: pointer;
+    color: var(--main-color-alt);
+    transition: var(--main-transition);
+   }
+    .box .content .titlename:hover{
+    color: var(--main-color);
+   }
+    .box .content p{
+    margin: 10px 0 0 0 ;
+    line-height: 1.5;
+    color: #777;
+   }
+   .box  .checkLike{
+    padding: 10px 15px;
+    font-size: 20px;
+    color: var(--main-color-alt);
+   }
+    .box .content .amount{
+    margin-top: 15px;
+    display: inline;
+    font-weight: bold;
+    color: var(--main-color-alt);
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+   }
+    .box .content span{
+    margin-top: 15px;
+    display: inline;
+    font-weight: bold;
+    float: right;
+    color: var(--main-color-alt);
+    font-size: 18px;
+    text-align: end;
+   }
+
+    .box .info{
+   padding: 20px;
+   border-top:  1px solid #E6E6E7;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--main-color);
+   font-weight: bold;
+   transition: var(--main-transition);
+   }
+  
+    .box .info:hover{
+     background-color: var(--main-color);
+     cursor: pointer;
+     color: white;
+   }
+   
+   /*End productList*/
